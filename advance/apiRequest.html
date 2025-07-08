@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            width: 40%;
+            /* background-color: #fff; */
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+        h4,p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <h2>Card</h2>
+    <div class="card">
+        <img src="" alt="Avatar" id="imageId" style="width:100%">
+        <div class="container">
+            <h4></h4>
+            <p>Architect & Engineer</p>
+        </div>
+    </div>
+</body>
+<script>
+    const name = document.querySelector('h4')
+    const avatar_url = document.querySelector('#imageId')
+    const p = document.querySelector('p')
+
+    // console.log(avatar_url)
+    let requestURl = 'https://api.github.com/users/shivampatidar2000'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestURl) // it is send the xml http request
+    xhr.onreadystatechange  = function(){
+        if(xhr.readyState == 4){
+            const jsonChange = JSON.parse(this.responseText)
+            name.innerHTML = `Name: <b>${jsonChange.login}</b>`;
+            avatar_url.src = jsonChange.avatar_url;
+            p.innerHTML = `followers ${jsonChange.followers}`;
+        }
+    } 
+    xhr.send()
+</script>
+</html>

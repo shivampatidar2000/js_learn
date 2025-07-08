@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai our code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    const print_hello = ()=>{
+        console.log("Hello shivam")
+    }
+
+    setTimeout(print_hello,2000) // it is run after 2 second only one time
+
+    const change_h1 = ()=>  document.querySelector('h1').innerHTML = "Shivam ki java script"
+
+    const changeMe = setTimeout(change_h1,3000)
+    const clearTime = ()=> {clearTimeout(changeMe); console.log("STOPED")}
+    document.querySelector("#stop").addEventListener("click",clearTime)
+
+    // setInterval(()=>{
+    //     console.log("Hello Hitesh")
+    // },2000) // it is run after 2 second in every time
+
+</script>
+</html>

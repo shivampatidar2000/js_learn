@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading">Hy My name <u1>is</u1> shivam</h1>
+    <p id="para"></p>
+</body>
+<script>
+    let change_heading = document.getElementById('heading')
+    // let change_heading = document.getElementById('heading').innerHTML = "You are good" // change the content 
+    let parag = document.getElementById('para')
+    // console.log(change_heading.innerText)
+    console.log(change_heading.innerHTML)
+    parag.innerHTML = change_heading.innerHTML
+
+</script>
+</html>

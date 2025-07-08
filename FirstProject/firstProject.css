@@ -1,0 +1,30 @@
+/* .firstClass{
+    background-color: #212121;
+    color: #ffff;
+    padding: 0px;
+    margin: 0px;
+} */
+.button{
+    /* width: 21px;
+    height: 21px; */
+    background-color: gray;
+    padding: 10px 30px;
+    border-radius: 8px;
+    color: #212121;
+    text-decoration: none;
+    border: 2px solid #212121;
+    margin: 15px;
+}
+
+#gray{
+    background-color: gray;
+}
+#yellow{
+    background-color: yellow;
+}
+#red{
+    background-color: red;
+}
+#white{
+    background-color: white;
+}

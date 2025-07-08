@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+        .model{
+            width: 350px;
+            height: 400px;
+            box-shadow: 0px 0px 10px 2px #ccc;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            /* top: 50%; */
+            top: -500px;
+            transition: 0.5s;
+
+        }
+        .model h2{
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            font-weight: normal;
+            padding: 10px 0px;
+            margin: 10px 0px;
+            position: relative;
+        }
+        .model h2 span{
+            position: absolute;
+            right: 10px;
+            font-size: 30px;
+            top: 0px;
+            cursor: pointer;
+        }
+        .showModel{
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="model">
+    <h2>Enquiry Now
+        <span>&times;</span>
+    </h2>
+    </div>
+    <button>save</button>
+
+    <button id="btn1">toggle button</button>
+</body>
+<script>
+    let btn = document.querySelector('button')
+    let model = document.querySelector(".model")
+    let closeIcon = document.querySelector(".model h2 span")
+    btn.addEventListener("click", ()=>{
+        model.classList.add("showModel")
+    })
+    closeIcon.addEventListener("click", ()=>{
+        model.classList.remove("showModel")
+    })
+    // document.querySelector("#btn1").addEventListener("click",()=> model.classList.toggle("showModel"))
+</script>
+</html>

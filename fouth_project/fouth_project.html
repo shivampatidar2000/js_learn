@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Number</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div id="wrapper">
+        <h1>Number Guess game</h1>
+        <p>Try and guess a random number between 1 to 100</p>
+        <p>you have 10 attemps to guess the right number.</p>
+        </br>
+        <form action="" class="form">
+            <label for="guessField" id="guess">Guess Number</label><br>
+            <input type="text" id="guessField" class="guessField"><br><br>
+            <input type="submit" id="subt" value="submit guess" class="guessSubmit">
+        </form>
+        <div class="resultParas">
+            <p>Previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+    <script src="fouth_project.js"></script>
+</body>
+</html>

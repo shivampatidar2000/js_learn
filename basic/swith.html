@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let num1 = Number(prompt("Enter the value"));
+    switch(true){
+        case num1 > 100:
+            console.log("Parsentage can not be grater then 100");
+            break;
+        case num1 >= 80:
+            console.log("You got the first division with plus +");
+            break;
+        case num1 > 60 && num1 <= 79: 
+            console.log("You got first devision")
+            break;
+        
+        case num1 > 45 && num1 <= 59:
+            console.log("You got the second devision")
+            break;
+        case num1 > 33 && num1 <= 44:
+            console.log("You got fourth devision")
+            break;
+        default :
+        console.log("You are fail")
+    }
+</script>
+</html>

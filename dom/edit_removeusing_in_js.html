@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam coding</title>
+</head>
+<body style="background-color: #212121; color: #ffff;" >
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    function add_language(lang_name) {
+        const li = document.createElement("li");
+        li.innerHTML = `${lang_name}`;
+        document.querySelector(".language").appendChild(li);
+    }
+    add_language("payton")
+    add_language("Ruby")
+
+    function optimizeWay(lang_name){
+        const li = document.createElement("li");
+        // const listAdd = document.createTextNode(`${lang_name}`)
+        // li.appendChild(listAdd)
+        li.appendChild(document.createTextNode(`${lang_name}`))
+        document.querySelector('.language').appendChild(li);
+    }
+    optimizeWay("Rails")
+
+
+    // edit 
+    const edit_li = document.querySelector('li:nth-child(2)')
+    const new_li = document.createElement("li")
+    new_li.textContent = "GO"
+    // new_li.appendChild(document.createTextNode("Mojo"))
+    edit_li.replaceWith(new_li)  // this method is use to replace the value like i want to replace the value of my second list item so i am using rhe replace_with approch
+
+
+    // other approch edit 
+
+    const firstEdit_li = document.querySelector("li:nth-child(1)") // nth-child select the item in the list 
+    firstEdit_li.outerHTML = "<li>TypeScript</li>" 
+
+//    remove 
+
+    const lastREmove_li = document.querySelector("li:last-child")
+    lastREmove_li.remove()
+</script>
+</html>

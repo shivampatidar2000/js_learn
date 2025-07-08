@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai our JS</h1>
+    <button id="stop">Stop</button>
+    <button id="start">Start</button>
+
+</body>
+<script>
+    const setDate = (str)=>{
+        console.log(str, Date.now())
+    }
+    let timer_id = null
+    // let setInt = setInterval(setDate,2000,"Print shivam");
+    const start = ()=> {
+        timer_id = setInterval(setDate,2000,"Print shivam"),
+        console.log("✓ started");    
+    }
+    const stop = ()=> { 
+        clearInterval(timer_id),
+        timer_id = null
+        console.log("✗ stopped", timer_id);
+    }
+
+    const interInter = document.querySelector('#stop').addEventListener("click",stop)
+    const start_inter = document.querySelector('#start').addEventListener("click",start)
+</script>
+</html>

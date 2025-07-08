@@ -1,0 +1,22 @@
+body{
+    background-color: gray;
+}
+.container{
+    text-align: center;
+    margin-top: 210px;
+    border: 2px solid black;
+    
+    /* display:contents; */
+    width: 510px;
+    height: 410px;
+    position: relative;
+    left: 40%;
+}
+
+.calculate{
+    width:110px;
+    height: 50px;
+    font-size: large;
+    font-style: oblique;
+    background-color: rgb(100, 207, 68);
+}

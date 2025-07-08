@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+    </form>
+    <button id="btn1">multiple</button>
+    <button id="btn2">Addition</button>
+    The result is:<p id="result"> </p>
+</body>
+
+<script>
+    num1 = document.getElementById('num1')
+    num2 = document.getElementById('num2')
+    btn1 = document.getElementById("btn1")
+    btn2 = document.getElementById("btn2")
+    result = document.getElementById("result")
+
+    // function getNumbers() {
+    //   return [Number(num1.value), Number(num2.value)];
+    // }
+
+    btn2.addEventListener('click', ()=>{
+        num3 = Number(num1.value) + Number(num2.value);
+        result.textContent = num3
+    })
+
+    btn1.addEventListener('click', ()=>{
+        num3 = Number(num1.value) * Number(num2.value);
+        result.textContent = num3
+    })
+
+    console.log(document.URL)
+</script>
+</html>

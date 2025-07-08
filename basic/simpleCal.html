@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    num1 <input type="text" class="input" placeholder="Inter the value one"></br>
+    num2 <input type="text" class="input" placeholder="Inter the value two"></br>
+    <button>save</button></br>
+    output:<p class="input"></p>
+
+</body>
+<script>
+    let allInput = document.querySelectorAll(".input") // it is return node list 
+    let btn = document.querySelector("button")
+    btn.addEventListener("click",()=>{
+        let input1 = Number(allInput[0].value);
+        let input2 = Number(allInput[1].value);
+        let output = input1 + input2
+        allInput[2].innerText = output
+        allInput[0].value = "";
+        allInput[1].value = "";
+        })
+
+    // console.log(allInput)
+</script>
+</html>

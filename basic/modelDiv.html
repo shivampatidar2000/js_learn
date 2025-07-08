@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            margin: auto;
+            gap: 20px;
+            width: 1320px;
+        }
+        .main{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+        }
+        button{
+            display: block;
+            margin: 20px auto;
+            padding: 10px 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main"></div>
+        <div class="main"></div>
+        <div class="main"></div>
+        <div class="main"></div>
+    </div>
+    <button>change color</button>
+
+</body>
+<script>
+    let btn = document.querySelector("button")
+    // let allBoxes = document.getElementsByClassName("main")
+    let allBoxes = document.querySelectorAll(".main")
+    console.log(allBoxes)
+    btn.addEventListener("click", ()=>{
+        // console.log(allBoxes);
+        // allBoxes[0].style.backgroundColor = "yellow"
+        // allBoxes[1].style.backgroundColor = "green"
+        // allBoxes[2].style.backgroundColor = "blue"
+        // allBoxes[3].style.backgroundColor = "pink"
+
+        //  allBoxes
+        //we need to change the all box color  so we use for of loop 
+        // for(let item of allBoxes){ we use this becuase we get the html collection
+        //     item.style.backgroundColor = "yellow"
+        // }
+        // allBoxes.forEach((value)=>{ we fot the node list so i am using the for each methods
+        //     value.style.backgroundColor ="red"
+        // })
+        
+    })
+</script>
+</html>

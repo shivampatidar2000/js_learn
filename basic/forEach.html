@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let l = [23,43,56,33,23,77]
+    // l.forEach((v,i)=>{ // it is called anonomues funcation // first value is value and sencond is index
+    //     console.log(v,i)
+    // })
+
+    // map 
+
+    // let newArray = l.map((v,i)=> v+5)
+    // let newArray = l.map((v,i)=>{
+    //     return v + 4
+    // })
+    // console.log(newArray)
+
+    // let displayResult = (v,i)=>{
+    //     return v+3
+    // }
+    // let newArray1 = l.map(displayResult) // it is return new array and we can operate the the operation
+    // console.log(newArray1)
+
+    // filter
+
+    // let l = [23,43,56,33,22,77]
+
+    // let newarray2 =l.filter((v,i)=>{ // it is filter the value and return new array
+    //     if(v%2===0){
+    //         return v
+    //     }
+
+    // })
+    // console.log(newarray2)
+
+    // reduce 
+
+    let l = [23,43,56,33,22,77] // reduce function reduce the array and give the final anwser
+    let newArray3 = l.reduce((total,val,i)=>{
+        return total + val
+    },3)
+    console.log(newArray3)
+</script>
+</html>
