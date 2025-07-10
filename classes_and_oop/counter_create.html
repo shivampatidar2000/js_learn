@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body{
+            background-color: #212121;
+            text-align: center;
+            padding: 32px;
+            margin: 23;
+        }
+        h1{
+            color: aqua;
+        }
+        button{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Counter</h1>
+    <h1 id="result"></h1>
+    <button>DECREASE</button>
+    <button>RESET</button>
+    <button>INCREASE</button>
+</body>
+<script>
+    let result = document.getElementById('result')
+    let buttons = document.querySelectorAll('button')
+    let count = 0;
+    console.log(buttons);
+    buttons.forEach((btn)=>{
+        if(btn.innerText == "DECREASE"){
+            btn.addEventListener('click',()=>{
+                console.log(btn.innerHTML);
+                
+                result.innerHTML = --count;
+                (count <= 0)? result.style.color = "red" : result.style.color = "green" 
+            })
+        }
+        if(btn.innerText =="INCREASE"){
+                console.log(btn.innerHTML);
+
+            btn.addEventListener('click', ()=>{
+                result.innerHTML = count++; 
+                (count <= 0)? result.style.color = "red" : result.style.color = "green" 
+            })
+        }
+        if(btn.innerText =="RESET"){
+                console.log(btn.innerHTML);
+            btn.addEventListener('click',()=>{
+                result.innerHTML= 0
+                result.style.color = "blue" 
+            })
+        }
+    })
+</script>
+</html>
