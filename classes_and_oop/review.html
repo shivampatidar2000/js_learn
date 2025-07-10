@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <style>
+        #img{
+            width: 221px;
+            height: 221px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .review{
+            text-align: center;
+            width: 400px;
+            height: 670px;
+            position: relative;
+            left: 40%;
+            top: 150px;
+            background-color: gray;
+            color: aliceblue;
+            border-radius: 3px;
+            padding: 21px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
+            
+        }
+        .content{
+            padding: 0px;
+        }
+        #btn{
+            color: rgb(67, 135, 138);
+            border: 1px solid rgb(67, 135, 138);
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 12px;
+            position: relative;
+            top: 43px;
+        }
+        #job{
+            color: aqua;
+        }
+
+        /* Next & previous buttons */
+        .prev, .next {
+        /* cursor: pointer; */
+        position: absolute;
+        top: 50%;
+        width: auto;
+        /* margin-top: -22px;
+        padding: 16px; */
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        background-color:gray ;
+        border: none;
+
+        }
+        .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="review">
+        <h1>Our Review</h1>
+        <img src="" id="img" alt="">
+        <h4 id="name">Shivam patidar</h4>
+        <p id="job">Software Enginner</p>
+        <p class="content">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora numquam doloribus eligendi, non autem velit eveniet totam hic, provident distinctio similique officiis quaerat, tenetur asperiores! Ab, consequuntur inventore! Quisquam, omnis!
+        </p>
+        <div style="position: relative; right: 99px;">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <button id="btn">Surpise Me</button>
+
+    </div>
+</body>
+<script>
+    const reviews = [
+        {
+            id: 1,
+            name: "Anil patidar",
+            job: "Full Stack Developer",
+            img: "./backend.png",
+            content: "A full-stack developer is a versatile software engineer proficient in both front-end and back-end technologies. They can handle the entire development process, from designing user interfaces (front-end) to building server-side logic, databases, and APIs (back-end)."
+        },
+         {
+            id: 2,
+            name: "Shivam patidar",
+            job: "Backend  Developer",
+            img: "./WhatsApp Image 2025-07-08 at 9.08.07 PM.jpeg",
+            content: " backend developer is responsible for building and maintaining the server-side logic and infrastructure of a website or application. This includes tasks like managing databases, handling server-side logic, creating APIs, and ensuring the application's security and performance."
+        },
+         {
+            id: 3,
+            name: "Rahul patidar",
+            job: "Photo grapher",
+            img: "./clickPicture.jpeg",
+            content: "A photograph description is a written explanation of what is depicted in an image, typically including details about the subject matter, composition, lighting, and any emotions or ideas the photograph evokes"
+        },
+         {
+            id: 4,
+            name: "Gopal patidar",
+            job: "UX Developer",
+            img: "./download.jpeg",
+            content: "A UX Developer combines design and technical skills to build user-friendly digital interfaces. They bridge the gap between design and development by translating user interface (UI) designs into interactive and responsive digital experiences."
+        },
+
+    ]
+
+    const image = document.querySelector('#img')
+    const name = document.querySelector("#name")
+    const job = document.querySelector("#job")
+    const content = document.querySelector(".content")
+    const prev = document.querySelector(".prev")
+    const next = document.querySelector(".next")
+    const surpise = document.querySelector("#btn")
+
+    // set starting item
+    currentItem = 0;
+
+    window.addEventListener("DOMContentLoaded", currentPerson(currentItem))
+
+    function currentPerson(user){
+        let item = reviews[user]
+        name.textContent = item.name
+        job.textContent = item.job
+        content.textContent = item.content
+        image.src = item.img
+    }
+    
+    prev.addEventListener('click',function(){
+        currentItem--;
+        if(currentItem < 0){
+            currentItem = reviews.length - 1
+        }
+        currentPerson(currentItem)
+    })
+
+    next.addEventListener('click', function(){
+        currentItem++;
+        if(currentItem > reviews.length - 1){
+            currentItem = 0
+        }
+        currentPerson(currentItem)
+    })
+
+    surpise.addEventListener('click',function(){
+        let random = Math.round(Math.random() * 10);
+        console.log(random);
+        if(random > reviews.length - 1){
+            random = 0
+        }
+        currentPerson(random)
+    })
+
+</script>
+</html>

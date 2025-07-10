@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>FAq</title>
+    <style>
+        .h1-content{
+            text-align: center;
+            font-style: italic;
+            font-family: "Times New Roman", Times, serif;
+            color: rgb(192, 177, 90);
+        }
+        body{
+            background-color: rgb(218, 228, 231);
+            padding: 0px;
+            margin: 0px;
+        }
+        .faq{
+            text-align: center;
+            position: relative;
+        }
+        .para{
+            width: 550px;
+            text-align: center;
+             position: relative;
+            left: 332px;
+            top: 32px;
+            display: none;
+        }
+        .h3_content{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.19);
+            width: 530px;
+            /* height: 24px; */
+            padding: 12px;
+            margin: 3px;
+            text-align: justify;
+            position: relative;
+            left: 324px;
+            top: 32px;
+        }
+        button{
+            color: rgb(192, 177, 90);
+            border-color: rgb(192, 177, 90);
+            font-size: 20px;
+            position: relative;
+            left: 120px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="h1-content">General Question</h1>
+    <div class="faq">
+        <div class="first_faq">
+            <h3 class="h3_content first_question">Do You Accept All Major Credit Card? <button class="fa">&#xf067;</button></h3>
+            <!-- <i style="font-size:24px" class="fa">&#xf067;</i> -->
+            <p class="para">
+                Whether or not "you" accept all major credit cards depends on whether "you" are a business or an individual, and if "you" are a business, how "you" process payments. Businesses that accept credit cards typically use payment processors or POS systems that facilitate transactions for major networks like Visa, Mastercard, American Express, and Discover. 
+            </p>
+        </div>
+        <div class="second_faq second_question">
+             <h3 class="h3_content">Do You Support Local Farmers? <button style="left: 160px;" class="fa">&#xf067;</button></h3>
+            <p class="para">
+                By supporting local farmers, people will not only save money within the community and improve the economy in the area, but they will also get better quality products at lower prices, which will also help with environmental problems and more.
+            </p>
+        </div>
+        <div class="third_faq">
+            <h3 class="h3_content third_question">Do You Use Organic Ingredients? <button style="left: 148px;" class="fa">&#xf067;</button></h3>
+            <p class="para">
+                This is Google Search, and as an AI model, this is Google Search does not use ingredients, organic or otherwise, as it is not a physical entity and does not consume food or products. However, in the context of discussing organic ingredients in general, they are produced using farming methods that prioritize ecological balance, soil and water quality, and minimize synthetic materials, though nutritional differences between organic and conventional foods are often minor,
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+
+    const fa = document.querySelectorAll('.fa');
+    fa.forEach(function(btn){
+        btn.addEventListener('click',function(){
+            const answer = btn.parentElement.nextElementSibling
+            if(answer.style.display === 'block'){
+                answer.style.display = "none"    
+                this.innerHTML = '&#xf067;'; 
+            }else {
+                answer.style.display = 'block';    // show it
+                this.innerHTML = '&#xf068;'; 
+            }
+        })
+    })
+</script>
+</html>
