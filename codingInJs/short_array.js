@@ -1,19 +1,17 @@
-function ifShortArray(array){
-    for(let i = 0; i < array.length -1; i++){
-        if(array[i] > array[i + 1]){
-            return false
+let array1 = [1, 3, 4, 68, 4, 3, 2, 78, 5]
+
+function arrShort(arr){
+    let n = arr.length
+    for(let i = 0; i < n-1; i++){
+        for(let j = 0; j < n-i; j++){
+            if(arr[j] > arr[j+1]){
+                let temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+            }
         }
     }
-    return true
+    return arr
 }
-let array1 = [1,2,3,4,5,6]
-
-let shor = ifShortArray(array1)
-console.log(shor);
-
-
-for(let i = 0; i< array1.length; i++){
-    if(array1[i] > array1[i + 1]){
-        console.log("it is not short")
-    }
-}
+console.log(
+ arrShort(array1));
