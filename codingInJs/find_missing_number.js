@@ -1,8 +1,15 @@
-let arr = [12,3,4,5,67,8,4,3]
+let arr = [1,2,3,5]
 
-function findMissingNumber(arr){
-    let n = arr.length - 1;
-    let expectedSum = (n * (n + 1)) / 2;
-    let actualSum = 0;
-    // for(let  )
+function findMissingnumber(arr, num){
+    let actual_number_sum = 0;
+    for(let i=0; i< arr.length; i++){
+        actual_number_sum += arr[i]
+    }
+    let expected_number_sum = (num * (num + 1))/2;
+
+    return expected_number_sum - actual_number_sum
 }
+
+const number = 5;
+const  missing = findMissingnumber(arr,number)
+console.log(missing);
